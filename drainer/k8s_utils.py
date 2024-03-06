@@ -72,7 +72,7 @@ def evict_pods(api, pods):
     for pod in pods:
         logger.info('Evicting pod {} in namespace {}'.format(pod.metadata.name, pod.metadata.namespace))
         body = {
-            'apiVersion': 'policy/v1beta1',
+            'apiVersion': 'policy/v1',
             'kind': 'Eviction',
             'deleteOptions': {},
             'metadata': {
